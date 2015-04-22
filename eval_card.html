@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Student Evaluation Card</title>
+
+<script type='text/javascript'>
+
+function changeit(elem) {
+	if (elem.style.backgroundColor == "green") {
+		elem.style.backgroundColor = 'red';
+	}
+	else if (elem.style.backgroundColor == "red") {
+		elem.style.backgroundColor = 'yellow';
+	}
+	else {
+		elem.style.backgroundColor = 'green';
+	}
+	
+}
+
+</script>
+
+<style type='text/css'>
+
+<!--
+@page { size:8in 5in landscape; }
+-->
+
+body {
+	background-color: #fff;
+	font-family: sans-serif;
+}
+
+#container {
+	border:1px solid #000;
+	height:5in;
+	width:8in;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+
+#name {
+	margin:4px;
+}
+
+.name {
+	margin:2px;
+	font-size:16px;
+	font-weight:bold;
+	width:7.8in;
+}
+
+.circle_holder {
+	width:1.1in;
+	padding-top:16px;
+}
+
+.text_holder {
+	width:2.8in;
+	padding-top:16px;
+}
+
+textarea { 
+	vertical-align: top; 
+	padding:3px;
+	font-size:12px;
+}​
+
+.on {
+    background-color:red;
+}
+
+.quad_tl {
+	border-top-left-radius: 16px;
+}
+
+.quad_tr {
+	border-top-right-radius: 16px;
+}
+
+.quad_bl {
+	border-bottom-left-radius: 16px;
+}
+
+.quad_br {
+	border-bottom-right-radius: 16px;
+}
+
+</style>
+
+</head>
+
+<body>
+<div id='container'>
+	
+	<div id='name'>
+	<input type='text' name='name' class='name' placeholder='student name'>
+	</div>
+	
+	<div id='table'>
+	<table border='0'>
+		<tr>
+			<td class='circle_holder'>
+				<table>
+					<tr>
+						<td class='quad_tl' width='50px' height='50px' style='background-color:green;' onclick="changeit(this)"></td>
+						<td class='quad_tr' width='50px' height='50px' style='background-color:green;' onclick="changeit(this)"></td>
+					</tr>
+					<tr>	
+						<td class='quad_bl' width='50px' height='50px' style='background-color:green;' onclick="changeit(this)"></td>
+						<td class='quad_br' width='50px' height='50px' style='background-color:green;' onclick="changeit(this)"></td>
+					</tr>
+				</table>
+			</td>
+			<td class='text_holder'>
+				<label for='social'>SOCIAL</label>
+				<textarea id="social" rows="11" cols="32" placeholder=""></textarea>
+			</td>
+			<td class='circle_holder'>
+				<table>
+					<tr>
+						<td class='quad_tl' width='50px' height='50px' style='background-color:green;' onclick="changeit(this)" align='center'>read</td>
+						<td class='quad_tr' width='50px' height='50px' style='background-color:green;' onclick="changeit(this)" align='center'>math</td>
+					</tr>
+					<tr>	
+						<td class='quad_bl' width='50px' height='50px' style='background-color:green;' onclick="changeit(this)" align='center'>spell</td>
+						<td class='quad_br' width='50px' height='50px' style='background-color:green;' onclick="changeit(this)" align='center'>write</td>
+					</tr>
+				</table>
+			</td>
+			<td class='text_holder'>
+				<label for='academic'>ACADEMIC</label>
+				<textarea id="academic" rows="11" cols="32" placeholder=""></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td class='circle_holder'>
+				<table>
+					<tr>
+						<td class='quad_tl' width='50px' height='50px' style='background-color:green;' onclick="changeit(this)"></td>
+						<td class='quad_tr' width='50px' height='50px' style='background-color:green;' onclick="changeit(this)"></td>
+					</tr>
+					<tr>	
+						<td class='quad_bl' width='50px' height='50px' style='background-color:green;' onclick="changeit(this)"></td>
+						<td class='quad_br' width='50px' height='50px' style='background-color:green;' onclick="changeit(this)"></td>
+					</tr>
+				</table>
+			</td>
+			<td class='text_holder'>
+				<label for='parents'>PARENTS</label>
+				<textarea id="parents" rows="11" cols="32" placeholder=""></textarea>
+			</td>
+			<td class='circle_holder'>
+				<table>
+					<tr>
+						<td class='quad_tl' width='50px' height='50px' style='background-color:green;' onclick="changeit(this)"></td>
+						<td class='quad_tr' width='50px' height='50px' style='background-color:green;' onclick="changeit(this)"></td>
+					</tr>
+					<tr>	
+						<td class='quad_bl' width='50px' height='50px' style='background-color:green;' onclick="changeit(this)"></td>
+						<td class='quad_br' width='50px' height='50px' style='background-color:green;' onclick="changeit(this)"></td>
+					</tr>
+				</table>
+			</td>
+			<td class='text_holder'>
+				<label for='developmental'>DEVELOPMENTAL</label>
+				<textarea id="developmental" rows="11" cols="32" placeholder=""></textarea>
+			</td>
+		</tr>
+
+	</table>
+	</div>
+</div>
+</body>
+</html>
